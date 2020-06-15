@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rejestracja</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">e-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">hasło</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">potwierdź hasło</ion-label>
+      <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="ion-text-center">
+    <ion-button (click)="register()" color="dark">Zarejestruj się</ion-button>
+  </div>
+</ion-content>

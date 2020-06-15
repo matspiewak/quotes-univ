@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'quotes',
+    loadChildren: () => import('./pages/quotes/quotes.module').then( m => m.QuotesPageModule)
+  },
+  {
+    path: 'quote-details',
+    loadChildren: () => import('./pages/quote-details/quote-details.module').then( m => m.QuoteDetailsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'my-quotes',
+    loadChildren: () => import('./pages/my-quotes/my-quotes.module').then( m => m.MyQuotesPageModule)
+  },
 ];
 
 @NgModule({
