@@ -10,14 +10,20 @@ import 'firebase/auth';
 export class FirebaseAuthService {
 
   constructor(private afAuth: AngularFireAuth, private navCtrl: NavController) { }
+  
+  signedIn: boolean;
 
-  initialize(){
-    this.afAuth.onAuthStateChanged(function(user) {
-      if(user){
-        var userId = user.uid;
-      } else {
-        this.navCtrl.navigateForward('login');
-      }
-    })
+  action(){
+    if(this.signedIn)
+      this.signOut();
+    else if(!this.signedIn)
+      this.signIn();
+  }
+  signOut(){
+    this.afAuth.signOut();
+    this.navCtrl.navigateForward('/home/qod');
+  }
+  signIn(){
+    this.navCtrl.navigateForward('/login');
   }
 }

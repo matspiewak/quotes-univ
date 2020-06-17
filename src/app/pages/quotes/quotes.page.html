@@ -1,6 +1,11 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Quotes</ion-title>
+  <ion-toolbar color="white">
+    <ion-buttons slot="end" >
+      <ion-button (click)="action()">
+        <ion-icon [name]="signedIn ? 'log-out-outline' : 'log-in-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Wyszukaj cytaty</ion-title>
   </ion-toolbar>
 </ion-header>
  

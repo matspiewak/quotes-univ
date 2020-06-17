@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { MyQuotesPageRoutingModule } from './my-quotes-routing.module';
 
 import { MyQuotesPage } from './my-quotes.page';
+import { Vibration } from '@ionic-native/vibration/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +16,11 @@ import { MyQuotesPage } from './my-quotes.page';
     IonicModule,
     MyQuotesPageRoutingModule
   ],
-  declarations: [MyQuotesPage]
+  declarations: [
+    MyQuotesPage
+  ],
+  providers: [
+    Vibration
+  ]
 })
 export class MyQuotesPageModule {}

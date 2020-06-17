@@ -35,6 +35,14 @@ const routes: Routes = [
     path: 'my-quotes',
     loadChildren: () => import('./pages/my-quotes/my-quotes.module').then( m => m.MyQuotesPageModule)
   },
+  {
+    path: 'qod',
+    loadChildren: () => import('./pages/qod/qod.module').then( m => m.QodPageModule)
+  },
+  {
+    path: 'start',
+    loadChildren: () => import('./pages/start/start.module').then( m => m.StartPageModule)
+  },
 ];
 
 @NgModule({

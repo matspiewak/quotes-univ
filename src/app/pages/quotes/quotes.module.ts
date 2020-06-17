@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { QuotesPageRoutingModule } from './quotes-routing.module';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { QuotesPage } from './quotes.page';
+import { Toast } from '@ionic-native/toast/ngx';
 
 @NgModule({
   imports: [
@@ -16,6 +16,11 @@ import { QuotesPage } from './quotes.page';
     IonicModule,
     QuotesPageRoutingModule
   ],
-  declarations: [QuotesPage]
+  declarations: [
+    QuotesPage
+  ],
+  providers: [
+    Toast
+  ]
 })
 export class QuotesPageModule {}

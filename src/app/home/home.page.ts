@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl: NavController, private splashScreen: SplashScreen) {
+    
+    this.splashScreen.show();
+    this.splashScreen.hide();
+
+    this.navCtrl.navigateForward("/home/qod")
+  }
+  
 
 }

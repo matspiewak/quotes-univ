@@ -14,6 +14,7 @@ export enum SearchType {
 export class QuoteService {
 
   url = 'https://api.paperquotes.com/apiv1/quotes/';
+  qodUrl = 'https://api.paperquotes.com/apiv1/qod/';
   apiKey='Token 6d87e3369715a82c7d00201b9811e66ea1f72c32';
 
   constructor(private http: HttpClient) { }

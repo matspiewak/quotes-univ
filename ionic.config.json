@@ -1,7 +1,8 @@
 {
   "name": "Quotes",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

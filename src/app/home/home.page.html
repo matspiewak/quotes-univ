@@ -1,14 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      {{Blank}}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-button href='/quotes'>quotes</ion-button>
-  <ion-button href='/login'>login</ion-button>
-  <ion-button href='/register'>register</ion-button>
-  <ion-button href='/my-quotes'>my quotes</ion-button>
+<ion-content>
 </ion-content>
+<ion-tabs>
+  <ion-tab-bar>
+    <ion-tab-button tab="qod">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Strona Główna</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="quotes">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-label>Wysz. Cytaty</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="my-quotes">
+      <ion-icon name="book-outline"></ion-icon>
+      <ion-label>Ulub. Cytaty</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
