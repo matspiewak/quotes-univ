@@ -1,27 +1,27 @@
 <ion-header>
-  <ion-toolbar color="white">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home/qod"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Zaloguj się</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home/qod"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Zaloguj się</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">e-mail</ion-label>
-      <ion-input type="text" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">hasło</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <ion-button [routerLink]="['/forgot-password']" size="small" fill="clear" color="medium">Nie pamiętasz hasła?</ion-button>
-    <ion-button [routerLink]="['/register']" size="small" fill="clear" color="medium">Nie posiadasz konta?</ion-button>
-    <ion-item lines="none"></ion-item>
-  </ion-list>
-  <div class="ion-text-center">
-    <ion-button (click)="login()" color="dark">Zaloguj się</ion-button>
-  </div>
+    <ion-list>
+        <ion-item>
+            <ion-label position="floating" color="primary">e-mail</ion-label>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating" color="primary">hasło</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button [routerLink]="['/forgot-password']" size="small" fill="clear" color="medium">Nie pamiętasz hasła?</ion-button>
+        <ion-button [routerLink]="['/register']" size="small" fill="clear" color="medium">Nie posiadasz konta?</ion-button>
+        <ion-item lines="none"></ion-item>
+    </ion-list>
+    <div class="ion-text-center">
+        <ion-button (click)="login()" color="primary">Zaloguj się</ion-button>
+    </div>
 </ion-content>
